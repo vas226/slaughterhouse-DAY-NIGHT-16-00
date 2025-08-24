@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>I love Grow a Garden my name seseserety9</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('c595e1e4-5ac8-4587-92d5-94bc95038434.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding-top: 100px;
+      backdrop-filter: brightness(0.6);
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 36px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    button {
+      padding: 15px 35px;
+      font-size: 20px;
+      background-color: #34c759;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+      background-color: #28a745;
+    }
+
+    .message {
+      margin-top: 25px;
+      font-size: 22px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000;
+      display: none;
+    }
+
+    .fruit-box {
+      margin-top: 50px;
+      font-size: 60px;
+      transition: opacity 1s ease;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>I love Grow a Garden my name <strong>seseserety9</strong></h1>
+
+  <button onclick="sendFruits()">Отдать фрукты</button>
+
+  <div class="message" id="message">✅ Фрукты переданы и возвращены!</div>
+
+  <div class="fruit-box visible" id="fruits">🍎 🍌 🍇 🍉 🥭</div>
+
+  <script>
+    function sendFruits() {
+      const fruits = document.getElementById('fruits');
+      const message = document.getElementById('message');
+
+      fruits.classList.remove('visible');
+      fruits.classList.add('hidden');
+
+      setTimeout(() => {
+        fruits.classList.remove('hidden');
+        fruits.classList.add('visible');
+        message.style.display = 'block';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
